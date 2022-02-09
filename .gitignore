@@ -1,0 +1,9 @@
+node_modules/
+.DS_Store
+.prettierignore
+.cache/
+.vscode/
+dist/
+design/
+.style-guide
+.README-template

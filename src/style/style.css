@@ -1,0 +1,200 @@
+/*
+## Layout
+
+The designs were created to the following widths:
+
+- Mobile: 375px
+- Desktop: 1440px
+
+Moderate violet: hsl(263, 55%, 52%)
+Very dark grayish blue: hsl(217, 19%, 35%)
+Very dark blackish blue: hsl(219, 29%, 14%)
+White: hsl(0, 0%, 100%)
+
+### Neutral
+
+Light gray: hsl(0, 0%, 81%)
+Light grayish blue: hsl(210, 46%, 95%)
+
+Note for text colors:
+
+1. "Verified Graduate" has the same color as the person's name with 50% opacity
+2. Review paragraphs inside the quotations have the same color as well, but are at 70% opacity
+
+## Typography
+
+### Body Copy
+
+- Font size: 13px
+
+### Font
+
+- Family: [Barlow Semi Condensed](https://fonts.google.com/specimen/Barlow+Semi+Condensed)
+- Weights: 500, 600
+ */
+
+:root{
+    --background-color: hsl(0, 0%, 81%);
+    --one-backgroud: hsl(263, 55%, 52%);
+    --two-background:hsl(217, 19%, 35%);
+    --three-background:hsl(0, 0%, 100%);
+    --four-background:hsl(219, 29%, 14%);
+}
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.container{
+    background-color: var(--background-color); 
+    padding: 20px;
+}
+
+
+/* Student*/
+
+.one, .two, .three, .four, .five{
+    display: grid;
+    flex-flow: column;
+    background-color: var(--one-backgroud);
+    border-radius: 5px;
+    padding: 5%;
+    margin: 10px;
+
+}
+.two{
+    background-color: var(--two-background);
+}
+.three, .five{
+    background-color: var(--three-background);
+}
+.four{
+    background-color: var(--four-background);
+}
+
+
+.studentProp{
+    display: grid;
+    grid-template-columns: 15% 75%;
+    grid-template-rows: 45% 45%;
+    align-items: center;
+    margin-bottom: 5%;
+
+}
+
+.name{
+    font-weight: bold;
+    color: aliceblue;
+}
+
+.position{
+    color: var(--background-color);
+}
+
+
+.studentProp img{
+    border: 2px var(--background-color) solid;
+    border-radius: 100%;
+    grid-column: 1/2;
+    grid-row: span 2;
+}
+
+/* Description */
+
+.entrance{
+    font-weight: bold;
+    font-size: 30px;
+    color: aliceblue;
+    padding-bottom: 20px;
+}
+
+.three .entrance, .three .name, .five .name, .five .entrance{
+    color:var(--four-background);
+}
+.three .description, .five .description{
+    color:var(--two-background)
+}
+
+.description{
+    color:var(--background-color);
+    text-align: 10px;
+    line-height: 25px;
+}
+
+@media (min-width: 800px){
+
+    .desc{
+        display: grid;   
+    }
+    
+
+    .one{
+        grid-column: span 2;
+        grid-row: span 1;
+    }
+
+    .two{
+        grid-column: 3/4;
+        grid-row: span 1;
+    }
+    .five{
+        grid-column: 4/5;
+        grid-row: span 2;
+    }
+
+    .three{
+        grid-column:1/2;
+        grid-row: 2/3;
+    }
+    .four{
+        grid-column: 2/4;
+        grid-row: 2/3;
+    }
+
+
+    .studentProp{
+        display: grid;
+        grid-template-columns: 20% 70%;
+        grid-template-rows: 45% 40%;
+        align-items: center;
+        margin-bottom: 5%;
+    
+    }
+
+    .one .studentProp, .four .studentProp{
+        grid-template-columns: 14% 84%;
+        
+    }
+
+    .five .studentProp{
+        grid-template-columns: 20% 50%;
+        grid-template-rows: 20% 15%;
+        margin: 0;
+    }
+    .three .studentProp, .two .studentProp {
+
+        grid-template-columns: 24% 50%;
+        grid-template-rows: 30% 25%;
+    }
+
+    .entrance{
+        padding-bottom: 10px;
+    }
+
+    .five{
+        grid-template-rows: 14% 20% 20% 20%;
+    }
+
+@media (min-width: 1200px){
+
+    .desc{
+        padding: 8%;
+        padding-left: 10%;
+        padding-right: 10%;
+        }
+    }
+
+
+}
