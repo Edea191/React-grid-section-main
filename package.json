@@ -1,12 +1,14 @@
 {
   "name": "testimonials-grid-section-main",
   "version": "1.0.0",
-  "homepage":"https://edea191.github.io/React-grid-section-main/",
+  "homepage": "https://edea191.github.io/React-grid-section-main/",
   "description": "![Design preview for the Testimonials grid section coding challenge](./design/desktop-preview.jpg)",
   "main": "index.js",
   "scripts": {
     "dev": "parcel src/index.html",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "keywords": [],
   "author": "",
